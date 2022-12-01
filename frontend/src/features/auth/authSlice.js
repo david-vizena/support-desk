@@ -20,8 +20,8 @@ export const register = createAsyncThunk(
 			return await authService.register(user);
 		} catch (error) {
 			const message =
-				(error.resposne &&
-					error.resposne.data &&
+				(error.response &&
+					error.response.data &&
 					error.response.data.message) ||
 				error.message ||
 				error.toString();
